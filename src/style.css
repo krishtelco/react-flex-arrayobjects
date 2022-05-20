@@ -1,0 +1,24 @@
+h1,
+p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.app{
+  color:darkgreen;
+  text-align: center;
+  height: auto;
+  position: relative;
+  margin-top: 30vh;
+}
+.flexbox{
+  height: 100vh;
+  display: flex;
+  color: darkgreen;
+  background-color:rgb(3, 0, 8);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexitem{
+  height: auto;
+}
