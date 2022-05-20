@@ -7,7 +7,7 @@ export default function App() {
       <div className="flexitem">
       <h1>Hello </h1>
       <h1>Hello </h1>
-      <h1>Hello </h1>
+      
       </div>
     </div>
   );
