@@ -24,6 +24,12 @@ export default function App() {
   const ondelete4 = (item) => {
     let index = fruits.indexOf(item);
     setFruits(fruits.filter((fruit) => fruit !== item));
+    
+  };
+  const onModify = (i,item) => {
+    let newfruits= [...fruits];
+    newfruits[i]=item;
+    setFruits([...newfruits]);
   };
   return (
     <div className="flexbox">
@@ -32,7 +38,8 @@ export default function App() {
         <button onClick={onsubmit}>add</button>{' '}
         <button onClick={() => ondelete('Apple')}>del</button>{' '}
         <button onClick={() => ondelete2('Orange')}>del2</button>{' '}
-        <button onClick={() => ondelete4('Mango')}>del4</button>
+        <button onClick={() => ondelete4('Mango')}>del4</button>{' '}
+        <button onClick={() => onModify(2,'Mango2')}>mod</button>{' '}
         <br />
         {fruits.map((fruit) => (
           <li>{fruit}</li>
