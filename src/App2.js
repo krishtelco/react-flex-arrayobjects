@@ -36,14 +36,22 @@ export default function App2() {
     let newarray = students.filter((student) => student.name !== sname);
     setStudents(newarray);
   };
-  const modify = () => {};
+  const modify = (sname,mark) => {
+    let index = students.findIndex((stuobj) => stuobj.name == sname);
+    let newstudent={...students[index],["mark1"]:mark}
+    
+    let oldstudents = [...students]
+    oldstudents[index]=newstudent;
+    setStudents([...oldstudents]);
+
+  };
   return (
     <div>
       <button onClick={() => add(newstudent)}>add</button>{' '}
       <button onClick={() => del('bbc')}>del</button>{' '}
       <button onClick={() => del2('abc')}>del2</button>{' '}
       <button onClick={() => del4('sun')}>del4</button>{' '}
-      <button onClick={modify}>mod</button> <div className="emptyline"></div>
+      <button onClick={()=>modify('bbc',55)}>mod</button> <div className="emptyline"></div>
       {students.map((student) => (
         <li>
           {student.name}-{student.mark1}
