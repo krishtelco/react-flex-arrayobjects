@@ -39,7 +39,7 @@ export default function App2() {
   const modify = (sname, mark) => {
     let index = students.findIndex((stuobj) => stuobj.name == sname);
     let newstudent = { ...students[index], ['mark1']: mark };
-    //setStudents(Object.values({...students, [index]: {...students[index], mark1: mark }}))
+    
     let oldstudents = [...students];
     oldstudents[index] = newstudent;
     setStudents([...oldstudents]);
