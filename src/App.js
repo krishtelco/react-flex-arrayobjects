@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import App2 from './App2';
 import './style.css';
 
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
         {fruits.map((fruit) => (
           <li>{fruit}</li>
         ))}
+        <App2/>
       </div>
     </div>
   );
