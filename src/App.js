@@ -42,6 +42,7 @@ export default function App() {
         <button onClick={() => ondelete4('Mango')}>del4</button>{' '}
         <button onClick={() => onModify(2,'Mango2')}>mod</button>{' '}
         <br />
+        <div className="emptyline"></div>
         {fruits.map((fruit) => (
           <li>{fruit}</li>
         ))}

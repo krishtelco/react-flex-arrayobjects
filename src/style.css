@@ -22,3 +22,6 @@ p {
 .flexitem{
   height: auto;
 }
+.emptyline{
+  margin-bottom: 20px;
+}
