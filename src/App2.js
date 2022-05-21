@@ -15,8 +15,9 @@ export default function App2() {
      //setStudents([...students,{...newitem}]); //also ok
      setStudents([...students,newitem]);
   }
-  const del=()=>{
-
+  const del=(sname)=>{
+    let newarray= students.filter((student)=>student.name !== sname);
+    setStudents(newarray)
   }
   const modify=()=>{
 
@@ -24,7 +25,7 @@ export default function App2() {
   return (
     <div>
       <button onClick={()=>add(newstudent)}>add</button>{' '}
-      <button onClick={del}>del</button>{' '}
+      <button onClick={()=>del("bbc")}>del</button>{' '}
       <button onClick={modify}>mod</button>{' '}
       {students.map((student) => (
         <li>
