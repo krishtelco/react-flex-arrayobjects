@@ -36,27 +36,31 @@ export default function App2() {
     let newarray = students.filter((student) => student.name !== sname);
     setStudents(newarray);
   };
-  const modify = (sname,mark) => {
+  const modify = (sname, mark) => {
     let index = students.findIndex((stuobj) => stuobj.name == sname);
-    let newstudent={...students[index],["mark1"]:mark}
+    let newstudent = { ...students[index], ['mark1']: mark };
     //setStudents(Object.values({...students, [index]: {...students[index], mark1: mark }}))
-    let oldstudents = [...students]
-    oldstudents[index]=newstudent;
+    let oldstudents = [...students];
+    oldstudents[index] = newstudent;
     setStudents([...oldstudents]);
-
   };
-  const modify1=(sname,mark)=>{
+  const modify1 = (sname, mark) => {
     let index = students.findIndex((stuobj) => stuobj.name == sname);
-    setStudents(Object.values({...students, [index]: {...students[index], mark1: mark }}))
-  }
+    setStudents(
+      Object.values({
+        ...students,
+        [index]: { ...students[index], mark1: mark },
+      })
+    );
+  };
   return (
     <div>
       <button onClick={() => add(newstudent)}>add</button>{' '}
       <button onClick={() => del('bbc')}>del</button>{' '}
       <button onClick={() => del2('abc')}>del2</button>{' '}
       <button onClick={() => del4('sun')}>del4</button>{' '}
-      <button onClick={()=>modify('bbc',55)}>mod</button> {' '}
-      <button onClick={()=>modify1('bbc',55)}>mod1</button> 
+      <button onClick={() => modify('bbc', 55)}>mod</button>{' '}
+      <button onClick={() => modify1('bbc', 55)}>mod1</button>
       <div className="emptyline"></div>
       {students.map((student) => (
         <li>
