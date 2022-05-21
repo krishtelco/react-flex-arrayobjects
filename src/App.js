@@ -35,7 +35,7 @@ export default function App() {
   return (
     <div className="flexbox">
       <div className="flexitem">
-        <h1>Hello </h1>
+        <h1>Fruits </h1>
         <button onClick={onsubmit}>add</button>{' '}
         <button onClick={() => ondelete('Apple')}>del</button>{' '}
         <button onClick={() => ondelete2('Orange')}>del2</button>{' '}
@@ -45,6 +45,7 @@ export default function App() {
         {fruits.map((fruit) => (
           <li>{fruit}</li>
         ))}
+        <h1>Students</h1>
         <App2/>
       </div>
     </div>
