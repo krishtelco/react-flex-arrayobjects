@@ -9,8 +9,9 @@ export default function App2() {
     { name: 'moon', mark1: 72 },
   ]);
 
-  const add=()=>{
-
+  const newstudent={name: 'new', mark1: 82};
+  const add=(newitem)=>{
+     setStudents([...students,{...newitem}]);
   }
   const del=()=>{
 
@@ -20,7 +21,7 @@ export default function App2() {
   }
   return (
     <div>
-      <button onClick={add}>add</button>{' '}
+      <button onClick={()=>add(newstudent)}>add</button>{' '}
       <button onClick={del}>del</button>{' '}
       <button onClick={modify}>mod</button>{' '}
       {students.map((student) => (
