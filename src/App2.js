@@ -10,8 +10,10 @@ export default function App2() {
   ]);
 
   const newstudent={name: 'new', mark1: 82};
+  
   const add=(newitem)=>{
-     setStudents([...students,{...newitem}]);
+     //setStudents([...students,{...newitem}]); //also ok
+     setStudents([...students,newitem]);
   }
   const del=()=>{
 
